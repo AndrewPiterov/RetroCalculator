@@ -79,13 +79,13 @@ class ViewController: UIViewController {
     
     func processOperation(_ operation: Operation){
         playSound()
-        if operation != Operation.Empty {
+        if currentOperation != Operation.Empty {
             
             if runningNumber != ""{
                 rightValStr = runningNumber
                 runningNumber = ""
                 
-                switch operation{
+                switch currentOperation{
                 case .Add:
                     result = "\((Double(leftValStr)! + Double(rightValStr)!))"
                     break
